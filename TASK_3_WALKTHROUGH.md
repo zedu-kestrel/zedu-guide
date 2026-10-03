@@ -4,6 +4,21 @@ This guide is designed for **every member of Team Kestrel**. It will walk you th
 
 ---
 
+## 🛑 Before You Begin: Have You Set Up the Project?
+
+If you have **not yet set up your computer or cloned the repository**, you must complete the setup first!
+
+👉 **Read & Follow the [Getting Started & Setup Guide](GETTING_STARTED.md) first to:**
+1. Install **Git, Node.js (v20+), and pnpm** (see [Tools Installation Guides](tools-installation-guide/)).
+2. Ensure you have been invited to the **`@zedu-kestrel`** GitHub organization and accepted the invite (see [Git & GitHub Access Guide](tools-installation-guide/GIT_AND_GITHUB.md)).
+3. Clone the official fork (`git clone https://github.com/zedu-kestrel/zedu-fe.git`).
+4. Link the official upstream (`git remote add upstream https://github.com/zedu-hng/zedu-fe.git`).
+5. Run `pnpm install` and verify the app opens on `http://localhost:3000`.
+
+*Once you have completed the setup and the app runs on your computer, jump right into the steps below!*
+
+---
+
 ## 📋 What is Task 3?
 
 Task 3 requires every contributor to:
