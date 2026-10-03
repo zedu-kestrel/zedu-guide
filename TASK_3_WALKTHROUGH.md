@@ -134,7 +134,7 @@ Push your branch to GitHub:
 git push -u origin feat/task-3-yourname
 ```
 
-*(If you get a 403 error here, see [Git & GitHub Troubleshooting](tools/GIT_AND_GITHUB.md#q1-i-get-remote-permission-to-zedu-kestrelzedu-fegit-denied-to-username-fatal-unable-to-access--the-requested-url-returned-error-403))*
+*(If you get a 403 error here, see [Git & GitHub Troubleshooting](tools-installation-guide/GIT_AND_GITHUB.md#q1-i-get-remote-permission-to-zedu-kestrelzedu-fegit-denied-to-username-fatal-unable-to-access--the-requested-url-returned-error-403))*
 
 ---
 

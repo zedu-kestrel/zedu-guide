@@ -20,10 +20,10 @@ Whether you are an experienced software engineer or a beginner collaborating wit
 ### 🛠️ Tool & Environment Setup Guides (Windows, Mac, Linux)
 | Tool | Guide | Covers |
 | :--- | :--- | :--- |
-| **Git & GitHub** | **[Git & GitHub Guide](tools/GIT_AND_GITHUB.md)** | Installing Git, creating account, requesting access to `@zedu-kestrel`, accepting invites, and fixing **403 Permission Denied** errors. |
-| **Node.js & pnpm** | **[Node.js & pnpm Guide](tools/NODE_AND_PNPM.md)** | Installing Node 20 LTS, pnpm 10.x, Corepack, and fixing Windows PowerShell script execution policy errors. |
-| **Docker** | **[Docker Setup Guide](tools/DOCKER.md)** | Docker Desktop installation, WSL 2 on Windows, Mac Apple Silicon/Intel, Linux engine, port conflict resolution, and memory limits. |
-| **Go (Golang)** | **[Go (Golang) Guide](tools/GO.md)** | Installing Go for backend microservices (`zedu-todo-list-app`), GOPROXY configuration, and modules. |
+| **Git & GitHub** | **[Git & GitHub Guide](tools-installation-guide/GIT_AND_GITHUB.md)** | Installing Git, creating account, requesting access to `@zedu-kestrel`, accepting invites, and fixing **403 Permission Denied** errors. |
+| **Node.js & pnpm** | **[Node.js & pnpm Guide](tools-installation-guide/NODE_AND_PNPM.md)** | Installing Node 20 LTS, pnpm 10.x, Corepack, and fixing Windows PowerShell script execution policy errors. |
+| **Docker** | **[Docker Setup Guide](tools-installation-guide/DOCKER.md)** | Docker Desktop installation, WSL 2 on Windows, Mac Apple Silicon/Intel, Linux engine, port conflict resolution, and memory limits. |
+| **Go (Golang)** | **[Go (Golang) Guide](tools-installation-guide/GO.md)** | Installing Go for backend microservices (`zedu-todo-list-app`), GOPROXY configuration, and modules. |
 
 ---
 
