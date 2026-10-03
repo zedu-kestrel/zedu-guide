@@ -11,6 +11,7 @@ Whether you are an experienced software engineer or a beginner collaborating wit
 ### 🚀 Core Workflow Guides
 | Document | Purpose |
 | :--- | :--- |
+| **[🎯 Task 3 Walkthrough Guide](TASK_3_WALKTHROUGH.md)** | **Start here for Task 3!** Step-by-step guide to updating text/name (no styling changes), testing, branching, and getting merged. |
 | **[1. Getting Started & Setup](GETTING_STARTED.md)** | Cloning the correct fork, setting up remotes, Node/pnpm environment, and running locally. |
 | **[2. Contribution & Git Workflow](CONTRIBUTING.md)** | Branch naming regex, syncing with upstream, conventional commit rules, and opening PRs. |
 | **[3. CI/CD & Review Bots Blueprint](CI_CD_AND_BOT_RULES.md)** | Complete breakdown of PR review bots, hardcoded URL bans, docstring coverage, and fork build relays. |

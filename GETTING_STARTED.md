@@ -19,7 +19,7 @@ Before cloning, verify that you have the required tools installed on your comput
 | :--- | :--- | :--- | :--- |
 | **Git** | `2.40+` | `git --version` | [Git Guide](tools/GIT_AND_GITHUB.md) |
 | **Node.js** | `v20.x` (LTS) | `node -v` | [Node Guide](tools/NODE_AND_PNPM.md) |
-| **pnpm** | `10.27.0` (matching repo) | `pnpm -v` | [pnpm Guide](tools/NODE_AND_PNPM.md) |
+| **pnpm** | `10.27.0` or higher (matching repo) | `pnpm -v` | [pnpm Guide](tools/NODE_AND_PNPM.md) |
 | **Docker** (Optional) | `26.x+` / Compose `v2.x` | `docker --version` | [Docker Guide](tools/DOCKER.md) |
 | **Go** (Optional) | `1.22+` | `go version` | [Go Guide](tools/GO.md) |
 
