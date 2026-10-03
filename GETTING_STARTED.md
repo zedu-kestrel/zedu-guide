@@ -4,21 +4,31 @@ This guide walks every Team Kestrel member through setting up a clean local deve
 
 ---
 
-## 1. Prerequisites
+## 1. Prerequisites & Tool Installation
 
-Before cloning, verify that you have the required versions installed on your computer:
+Before cloning, verify that you have the required tools installed on your computer. If you do not have them installed or need to configure them, follow our dedicated step-by-step guides:
 
-| Tool | Recommended Version | Verify Command |
-| :--- | :--- | :--- |
-| **Git** | `2.40+` | `git --version` |
-| **Node.js** | `v20.x` (LTS) | `node -v` |
-| **pnpm** | `10.27.0` (matching repo) | `pnpm -v` |
+* 🐙 **[Git & GitHub Setup Guide](tools/GIT_AND_GITHUB.md)** — Installing Git, GitHub account setup, requesting team access, accepting invitations, and fixing 403 permission errors.
+* 🟢 **[Node.js & pnpm Setup Guide](tools/NODE_AND_PNPM.md)** — Installing Node 20 LTS, pnpm, and fixing Windows PowerShell script execution policy errors.
+* 🐳 **[Docker Setup Guide](tools/DOCKER.md)** — Running databases and microservices with Docker Desktop (Windows WSL2, Mac Apple Silicon/Intel, Linux).
+* 🐹 **[Go (Golang) Setup Guide](tools/GO.md)** — Installing Go for backend microservices, modules, and proxy settings.
+
+### Quick Version Check Table:
+
+| Tool | Recommended Version | Verify Command | Setup Guide |
+| :--- | :--- | :--- | :--- |
+| **Git** | `2.40+` | `git --version` | [Git Guide](tools/GIT_AND_GITHUB.md) |
+| **Node.js** | `v20.x` (LTS) | `node -v` | [Node Guide](tools/NODE_AND_PNPM.md) |
+| **pnpm** | `10.27.0` (matching repo) | `pnpm -v` | [pnpm Guide](tools/NODE_AND_PNPM.md) |
+| **Docker** (Optional) | `26.x+` / Compose `v2.x` | `docker --version` | [Docker Guide](tools/DOCKER.md) |
+| **Go** (Optional) | `1.22+` | `go version` | [Go Guide](tools/GO.md) |
 
 > [!TIP]
 > If you don't have `pnpm` installed, run:
 > ```bash
 > npm install -g pnpm@10.27.0
 > ```
+> *(On Windows, if you get a script permission error, see [Node & pnpm Guide Q1](tools/NODE_AND_PNPM.md#q1-on-windows-powershell-pnpm--file-cpnpmps1-cannot-be-loaded-because-running-scripts-is-disabled-on-this-system))*
 
 ---
 

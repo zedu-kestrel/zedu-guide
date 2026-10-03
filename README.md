@@ -8,12 +8,21 @@ Whether you are an experienced software engineer or a beginner collaborating wit
 
 ## 📚 Guide Index
 
+### 🚀 Core Workflow Guides
 | Document | Purpose |
 | :--- | :--- |
 | **[1. Getting Started & Setup](GETTING_STARTED.md)** | Cloning the correct fork, setting up remotes, Node/pnpm environment, and running locally. |
 | **[2. Contribution & Git Workflow](CONTRIBUTING.md)** | Branch naming regex, syncing with upstream, conventional commit rules, and opening PRs. |
 | **[3. CI/CD & Review Bots Blueprint](CI_CD_AND_BOT_RULES.md)** | Complete breakdown of PR review bots, hardcoded URL bans, docstring coverage, and fork build relays. |
 | **[4. AI Prompting Cheatsheet](AI_PROMPTING_CHEATSHEET.md)** | Ready-to-copy prompts to give your AI pair programmer so it follows repo rules automatically. |
+
+### 🛠️ Tool & Environment Setup Guides (Windows, Mac, Linux)
+| Tool | Guide | Covers |
+| :--- | :--- | :--- |
+| **Git & GitHub** | **[Git & GitHub Guide](tools/GIT_AND_GITHUB.md)** | Installing Git, creating account, requesting access to `@zedu-kestrel`, accepting invites, and fixing **403 Permission Denied** errors. |
+| **Node.js & pnpm** | **[Node.js & pnpm Guide](tools/NODE_AND_PNPM.md)** | Installing Node 20 LTS, pnpm 10.x, Corepack, and fixing Windows PowerShell script execution policy errors. |
+| **Docker** | **[Docker Setup Guide](tools/DOCKER.md)** | Docker Desktop installation, WSL 2 on Windows, Mac Apple Silicon/Intel, Linux engine, port conflict resolution, and memory limits. |
+| **Go (Golang)** | **[Go (Golang) Guide](tools/GO.md)** | Installing Go for backend microservices (`zedu-todo-list-app`), GOPROXY configuration, and modules. |
 
 ---
 

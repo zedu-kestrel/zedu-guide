@@ -52,7 +52,7 @@ If ANY line includes `http://` or `https://` (such as `https://www.linkedin.com/
 CodeRabbit scans every function and component touched in your pull request. If the docstring coverage is below 80%, it flags a warning.
 
 **How to Comply:**
-Always add standard JSDoc comments above your functions:
+Always add standard JSDoc comments above your functions, if you added one:
 
 ```tsx
 /**
