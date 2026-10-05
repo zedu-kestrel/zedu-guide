@@ -52,11 +52,11 @@ Team Kestrel Fork (Origin):    https://github.com/zedu-kestrel/zedu-fe
    ```
    *Example:* `feat/task-2-zedu-kestrel-contributors-page` *(Valid)*  
    *Counterexample:* `feature/contributor` *(Blocked by CI)*
-3. **Conventional Commit & PR Title:** Always format commits and PR titles as:
+3. **Conventional Commit & PR Title:** Always format commits and PR titles with your ticket ID inside the parenthesis:
    ```text
-   feat(scope): descriptive title in lowercase
+   feat(<ticket-id>): descriptive title in lowercase
    ```
-   *Example:* `feat(homepage): add team kestrel contributors page`
+   *Example:* `feat(KESTREL-001): add team kestrel contributors page`
 4. **Zero Hardcoded URLs:** Never write `http://` or `https://` in frontend components unless it is `w3.org` or `avatars.githubusercontent.com`. External URLs trigger a blocking error in the PR Review Bot. Use `mailto:`, relative paths, or environment variables.
 5. **Docstring Coverage:** Every new exported component and function must have a JSDoc block (`/** ... */`) so CodeRabbit gives 100% docstring coverage.
 6. **Trigger Fork Build:** After opening your PR, navigate to your fork ➔ **Actions** ➔ **PR build** ➔ click **Run workflow** on your branch. Once it finishes green, comment `/fork-build` on your PR.

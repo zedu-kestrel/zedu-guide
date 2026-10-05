@@ -27,7 +27,7 @@ Here are the strict engineering guidelines you MUST adhere to:
    - `pnpm run check-types`
    - `pnpm run build`
 7. Branch naming convention: `feat/<task-number>-<short-description>` or `fix/<task-number>-<short-description>`.
-8. Commit message convention: lowercase conventional commit format (e.g., `feat(module): add short description`).
+8. Commit message convention: lowercase conventional commit format with ticket ID (e.g., `feat(KESTREL-001): add short description`).
 ```
 
 ---
@@ -67,8 +67,8 @@ We are ready to prepare our changes for submission. Please:
    - `pnpm run build`
 3. If formatting fails, run `pnpm run format` to fix styling issues.
 4. Provide a conventional commit message in lowercase format matching:
-   `<type>(<scope>): <short imperative description>`
-   (e.g., `feat(contributors): add team kestrel page`)
+   `<type>(<TICKET-ID>): <short imperative description>`
+   (e.g., `feat(KESTREL-001): add team kestrel page`)
 ```
 
 ---
@@ -79,7 +79,7 @@ When you are ready to open a Pull Request on GitHub:
 
 ```markdown
 Please generate a GitHub Pull Request description using our mandatory PR template for this change:
-- PR Title (must follow conventional commit lowercase rules, e.g. `feat(kestrel): add team contributors page`)
+- PR Title (must include ticket ID in parenthesis, e.g. `feat(KESTREL-001): add team contributors page`)
 - Summary of changes
 - Motivation and context
 - Testing done (confirming format, lint, types, build passed)

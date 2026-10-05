@@ -76,10 +76,10 @@ Commits are validated by **`commitlint`**. Every commit message must follow the 
 ```
 
 ### Valid Commit Examples:
-* `feat(homepage): add team kestrel contributors page`
-* `fix(contributors): remove external link from card`
-* `docs(readme): add setup and contribution guide`
-* `refactor(avatar): extract initials generator helper`
+* `feat(KESTREL-001): add team kestrel contributors page`
+* `chore(KESTREL-004): update contributor display name text`
+* `fix(KESTREL-012): remove external link from card`
+* `docs(KESTREL-003): update setup and contribution guide`
 
 > [!WARNING]
 > Never use capitalized types or omit the colon (`:`).
@@ -125,11 +125,18 @@ When opening a PR on GitHub:
 > **NEVER target `zeduchat/zedu-fe`** (the old root repository).  
 > **NEVER target `zedu-kestrel/zedu-fe:dev`** (opening PRs into your own fork's dev combines author commits and violates the Single Author rule).
 
-### 5.2. PR Title Convention
-Your PR title is also validated by `commitlint`. Match the same conventional commit format:
+### 5.2. PR Title Convention (Ticket ID Required in Scope!)
+Your PR title is validated by `commitlint`. You **MUST** include your ticket number (e.g. `KESTREL-001`) inside the parentheses:
+
 ```text
-feat(homepage): add team kestrel contributors page
+<type>(<TICKET-ID>): <short description in lowercase>
 ```
+
+#### Valid PR Title Examples:
+* `feat(KESTREL-001): add team kestrel contributors page`
+* `chore(KESTREL-004): update contributor display name text`
+* `fix(KESTREL-012): resolve overflow on mobile navigation`
+* `refactor(KESTREL-008): extract reusable card component`
 
 ### 5.3. PR Body Template
 Copy and fill out this exact Markdown template in your PR description:
@@ -137,7 +144,7 @@ Copy and fill out this exact Markdown template in your PR description:
 ```markdown
 ## Ticket
 
-- **Ticket ID:** task-2
+- **Ticket ID:** KESTREL-001
 - **Ticket title:** Add Team Kestrel Contributors Page
 
 ## Team lead

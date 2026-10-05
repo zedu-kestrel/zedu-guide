@@ -130,14 +130,14 @@ pnpm run build
 ---
 
 ### Step 5: Commit Your Changes
-We follow the **Conventional Commits** specification. The commit message must be in **lowercase**:
+We follow the **Conventional Commits** specification. The commit message must include your ticket ID (e.g. `KESTREL-001`) inside the parentheses:
 
 ```bash
 git add .
-git commit -m "feat(contributors): update yourname text for task 3"
+git commit -m "feat(KESTREL-001): update yourname text for task 3"
 ```
 
-* ✅ **Valid:** `feat(contributors): update daniel name for task 3`
+* ✅ **Valid:** `feat(KESTREL-001): update daniel name for task 3`
 * ❌ **Invalid:** `Feat: updated name`, `task 3 done`, `Update contributors.ts`
 
 ---
@@ -168,8 +168,8 @@ git push -u origin feat/task-3-yourname
    * **Base branch:** `dev`
    * **Head repository:** `zedu-kestrel/zedu-fe`
    * **Compare branch:** `feat/task-3-yourname`
-4. **PR Title (MUST be lowercase):**  
-   `feat(contributors): update yourname text for task 3`
+4. **PR Title (MUST include ticket ID):**  
+   `feat(KESTREL-001): update yourname text for task 3`
 5. **PR Description:** Copy and fill in this markdown template:
 
 ```markdown
