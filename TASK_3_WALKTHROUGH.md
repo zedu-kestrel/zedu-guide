@@ -142,8 +142,15 @@ git commit -m "feat(contributors): update yourname text for task 3"
 
 ---
 
-### Step 6: Push Your Branch to Team Kestrel's Fork (`origin`)
-Push your branch to GitHub:
+### Step 6: Sync & Push Your Branch to Team Kestrel's Fork (`origin`)
+
+Before pushing, rebase with upstream in one line to ensure you have the freshest code and avoid merge conflicts:
+
+```bash
+git pull --rebase upstream dev
+```
+
+Now push your branch to GitHub:
 
 ```bash
 git push -u origin feat/task-3-yourname

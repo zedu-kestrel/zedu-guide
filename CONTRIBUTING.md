@@ -88,7 +88,23 @@ Commits are validated by **`commitlint`**. Every commit message must follow the 
 
 ---
 
-## 4. Pull Request (PR) Requirements
+## 4. Syncing & Pushing Your Branch
+
+Right before pushing to GitHub, always rebase with upstream in one line to ensure your branch has zero merge conflicts:
+
+```bash
+git pull --rebase upstream dev
+```
+
+Then push your branch to Team Kestrel's fork:
+
+```bash
+git push -u origin feat/your-ticket-branch-name
+```
+
+---
+
+## 5. Pull Request (PR) Requirements
 
 ### 4.1. TARGETING RULE (Critical!)
 When opening a PR on GitHub:
