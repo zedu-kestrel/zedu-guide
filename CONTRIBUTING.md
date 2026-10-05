@@ -99,8 +99,16 @@ git pull --rebase upstream dev
 Then push your branch to Team Kestrel's fork:
 
 ```bash
+# If pushing for the first time:
 git push -u origin feat/your-ticket-branch-name
+
+# If updating a branch you ALREADY pushed earlier (after a rebase):
+git push --force-with-lease origin feat/your-ticket-branch-name
 ```
+
+> [!TIP]
+> **What does `--force-with-lease` mean?**  
+> When you rebase, Git creates new commit hashes. `--force-with-lease` is the **safe version of force-push**. It updates GitHub with your rebased commit, but automatically cancels if anyone else pushed commits to that branch in the meantime. Never use plain `git push --force`.
 
 ---
 

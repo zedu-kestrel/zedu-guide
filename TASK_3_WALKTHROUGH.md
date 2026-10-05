@@ -231,9 +231,24 @@ Because your branch is on the `zedu-kestrel` fork, the main `zedu-hng` CI needs 
 ### Q2: Can I delete another person's card in `contributors.ts`?
 **No!** Only edit your own name/entry. Never delete or overwrite other team members' entries.
 
-### Q3: What if someone else's PR was merged while I was working?
-Before pushing or if GitHub shows a conflict:
+### Q3: What if someone else's PR was merged before I pushed?
+Before pushing your branch, run:
 ```bash
-git pull upstream dev
+git pull --rebase upstream dev
 ```
-Resolve any text merge conflicts in `contributors.ts`, run `pnpm run check-types`, and push.
+If there is a conflict in `contributors.ts`, simply keep both entries, run `pnpm run check-types`, and push.
+
+### Q4: My PR is already open on GitHub and says "This branch is out of date with the base branch". What should I do?
+1. **DO NOT click GitHub's "Update branch" button.** That button creates a `Merge branch 'dev'` commit that can trigger `commitlint` failures and violate HNG's single-author check.
+2. Instead, update it cleanly from your terminal with these 3 commands:
+   ```bash
+   git fetch upstream
+   git rebase upstream/dev
+   git push --force-with-lease origin feat/task-3-yourname
+   ```
+
+### Q5: What does `--force-with-lease` mean, and why is it needed?
+* **Why it is needed:** When you rebase, Git rebuilds your commit on top of the latest code with a brand-new commit ID. Because the history changed, a standard `git push` is rejected.
+* **What it means:** `--force-with-lease` is the **safe version of force-push**. It tells GitHub:
+  > *"Update my branch with my newly rebased commit, BUT abort if someone else pushed changes to this branch that I haven't seen."*
+* Unlike dangerous `git push --force` (which blindly wipes out remote work), `--force-with-lease` protects against accidental data loss while cleanly updating your pull request.
