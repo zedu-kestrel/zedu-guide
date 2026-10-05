@@ -114,7 +114,7 @@ git push --force-with-lease origin feat/your-ticket-branch-name
 
 ## 5. Pull Request (PR) Requirements
 
-### 4.1. TARGETING RULE (Critical!)
+### 5.1. TARGETING RULE (Critical!)
 When opening a PR on GitHub:
 * **Base repository:** `zedu-hng/zedu-fe`
 * **Base branch:** `dev`
@@ -125,13 +125,13 @@ When opening a PR on GitHub:
 > **NEVER target `zeduchat/zedu-fe`** (the old root repository).  
 > **NEVER target `zedu-kestrel/zedu-fe:dev`** (opening PRs into your own fork's dev combines author commits and violates the Single Author rule).
 
-### 4.2. PR Title Convention
+### 5.2. PR Title Convention
 Your PR title is also validated by `commitlint`. Match the same conventional commit format:
 ```text
 feat(homepage): add team kestrel contributors page
 ```
 
-### 4.3. PR Body Template
+### 5.3. PR Body Template
 Copy and fill out this exact Markdown template in your PR description:
 
 ```markdown
@@ -197,7 +197,36 @@ Used AI pair programming to structure the page components and verify type safety
 
 ---
 
-## 5. Post-Merge Branch Deletion
+## 6. Updating an Out-of-Date Pull Request (`--force-with-lease`)
+
+When your PR is open on GitHub and someone else's PR gets merged into `dev`, GitHub may display:
+> *"This branch is out of date with the base branch."*
+
+### ⚠️ Warning: Do NOT click GitHub's "Update branch" button!
+Clicking that button creates an automated `Merge branch 'dev' into...` commit. That merge commit often **fails the commitlint check** and violates HNG's **single-author rule**.
+
+### ✅ The Safe Way: Rebase & Force-Push Locally
+While on your feature branch (e.g. `feat/your-ticket-branch-name`), run these 3 commands in your terminal:
+
+```bash
+# 1. Fetch the latest changes from upstream
+git fetch upstream
+
+# 2. Rebase your commit cleanly on top of upstream dev
+git rebase upstream/dev
+
+# 3. Safely update your open PR on GitHub
+git push --force-with-lease origin feat/your-ticket-branch-name
+```
+
+### What does `--force-with-lease` mean?
+* When you rebase, Git creates new commit hashes. Because the history changed, a normal `git push` is rejected.
+* `--force-with-lease` is the **safe version of force-push**. It updates GitHub with your rebased commit, but **aborts immediately** if someone else pushed changes to that branch that you haven't seen.
+* Unlike dangerous `git push --force` (which blindly wipes out work), `--force-with-lease` safely updates your PR with zero risk of overwriting other people's commits.
+
+---
+
+## 7. Post-Merge Branch Deletion
 
 Once your PR has been merged into `zedu-hng/zedu-fe:dev`:
 

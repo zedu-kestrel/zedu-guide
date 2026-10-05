@@ -241,6 +241,7 @@ If there is a conflict in `contributors.ts`, simply keep both entries, run `pnpm
 ### Q4: My PR is already open on GitHub and says "This branch is out of date with the base branch". What should I do?
 1. **DO NOT click GitHub's "Update branch" button.** That button creates a `Merge branch 'dev'` commit that can trigger `commitlint` failures and violate HNG's single-author check.
 2. Instead, update it cleanly from your terminal with these 3 commands:
+- While on your feature branch eg feat/task-3-yourname
    ```bash
    git fetch upstream
    git rebase upstream/dev
