@@ -59,6 +59,11 @@ Go to **[zedu-hng/zedu-fe/pulls](https://github.com/zedu-hng/zedu-fe/pulls)** an
 * **PR Title:** Must match your commit and branch ticket ID (e.g. `chore(KESTREL-004): update contributor bio to ai engineer`).
 * **PR Description:** You **MUST** use the exact PR template with **every single checkbox ticked with `[x]` verbatim**.
 
+> ⚠️ **THE 3-WAY TICKET MATCH RULE (CRITICAL):**  
+> The ticket number in your **Branch Name**, your **PR Title**, and your **PR Description Body** (`- **Ticket ID:** ...`) **MUST ALL BE IDENTICAL!**  
+> * Example: If your branch is `feat/KESTREL-022-...`, your PR title **MUST** be `feat(KESTREL-022): ...`, and your PR body **MUST** say `- **Ticket ID:** KESTREL-022`.  
+> * If you copy the PR template and leave an example like `KESTREL-001` or `KESTREL-004`, the automated CI check will immediately fail with a ticket mismatch error!
+
 ---
 
 ### Step 3: The "Wait" Period & Automated Check Verification
@@ -167,10 +172,15 @@ git push --force-with-lease origin HEAD
 ---
 
 ### 2. `PR title` or `Branch name` Failure
-* **Cause:** The ticket ID in your branch name does not match the ticket ID in your PR title, or conventional commit format is missing (e.g. `feat: my title` instead of `feat(KESTREL-001): my title`).
+* **Cause 1: Ticket Number Mismatch**  
+  Upstream's CI extracts the digits from your branch name and your PR title and compares them. If your branch is `feat/KESTREL-022-...` but your PR title says `feat(KESTREL-001): ...` (e.g. copied from a guide example), CI will fail with:
+  > `Error: PR title ticket '001' doesn't match the branch ticket '022'. Use the same ticket as your branch name.`
+* **Cause 2: Invalid Conventional Commit Format**  
+  Missing ticket in parenthesis, uppercase type, or missing colon (e.g. `feat: my title` or `Feat(KESTREL-022): my title` instead of `feat(KESTREL-022): my title`).
 * **Fix:**
-  * If the branch name is correct: Simply edit the PR title on GitHub. `pr-rules` will re-run and pass immediately.
-  * If the branch name is wrong: Rename your branch locally (`git branch -m <correct-name>`), push it (`git push -u origin <correct-name>`), and open a new PR.
+  * **If your branch name is correct:** Simply click **Edit** next to your PR title on GitHub, update the ticket ID to match your branch, and click **Save**. The `PR title` check will automatically re-run and turn green immediately without pushing new code!
+  * **Check your PR description too:** Ensure `- **Ticket ID:** KESTREL-xxx` inside your description also matches your branch number.
+  * **If the branch name itself is wrong:** Rename your branch locally (`git branch -m <correct-name>`), push it (`git push -u origin <correct-name>`), and open a new PR.
 
 ---
 
