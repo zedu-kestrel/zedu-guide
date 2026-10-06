@@ -65,16 +65,10 @@ Go to **[zedu-hng/zedu-fe/pulls](https://github.com/zedu-hng/zedu-fe/pulls)** an
 
 1. Wait **2 to 3 minutes** for the GitHub Actions suite to finish.
 2. Scroll to the bottom of your PR page and inspect the checks box.
-3. Every automated check must have a green checkmark (`Passed` / `OK`):
-   * `Branch name` ✅
-   * `PR title` ✅
-   * `PR template` ✅
-   * `Prettier, ESLint, TypeScript & Build` ✅
-   * `Security scans (Semgrep, Gitleaks, ClamAV)` ✅
-   * `Preview status` ✅
-   * `Fork build` ✅
-
-*(Note: `Lead approved` will show as a red ❌ or "failing" with the message: `Waiting for an approving review from a team lead: @Fabito97 @yvnks`. **This is completely normal and NOT a code bug!** It simply means GitHub is waiting for a lead to approve).*
+3. Check the status of your checks at the bottom of the PR:
+   * **`Passed`, `OK`, or `Skipped` are all completely fine!** (For example, `Fork build` is skipped when disabled in the fork, and some lint/preview steps are skipped on non-code changes — that is totally valid).
+   * **The key rule:** You must have **NO red ❌ failures** on code, linting, types, build, branch name, or PR template.
+   * *(Note: `Lead approved` is the ONLY check that will show as a red ❌ or "failing" before review, with the message: `Waiting for an approving review from a team lead: @Fabito97 @yvnks`. That is completely normal).*
 
 ---
 
