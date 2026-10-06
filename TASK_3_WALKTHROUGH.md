@@ -260,9 +260,11 @@ Because your branch is on the `zedu-kestrel` fork, the main `zedu-hng` CI needs 
 
 ---
 
-### Step 9: Team Lead Review & Merge
-* Tag our team lead **`@yvnks`** in the PR comment or on the team chat for approval.
-* Once approved and merged by HNG reviewers, Task 3 is complete! 🎉
+### Step 9: Team Lead Review & Final Queue
+* Tag our team leads **`@Fabito97`** or **`@yvnks`** in the PR comment or on the team chat for approval.
+* Once approved, verify your PR is ready for merge by checking the official queue:  
+  👉 **[Zedu Ready-for-Review Queue](https://github.com/zedu-hng/zedu-fe/pulls?q=is%3Apr+state%3Aopen+label%3Aready-for-review+status%3Asuccess)**
+* Once claimed by HNG reviewers and merged into `dev`, Task 3 is complete! 🎉
 
 ---
 

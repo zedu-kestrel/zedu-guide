@@ -79,7 +79,10 @@ My PR is ready for review! All automated CI checks are passed.
 1. Either **`@Fabito97`** or **`@yvnks`** will inspect your PR on GitHub, go to the **Files changed** tab, and click **Approve**.
 2. Once approved, the `Lead approved` check turns green.
 3. Upstream will automatically attach the `ready-for-review` label and add your PR to the **Central Zedu Reviewer Queue**.
-4. A core reviewer (`@zedu-hng/reviewers`) will claim it with `/claim` and merge it into `dev`! 🎉
+4. **How to verify your PR is ready to merge:**  
+   Visit the official queue link below:  
+   👉 **[Zedu Ready-for-Review Queue](https://github.com/zedu-hng/zedu-fe/pulls?q=is%3Apr+state%3Aopen+label%3Aready-for-review+status%3Asuccess)**  
+   If your PR appears in this list, **you are 100% good to go!** A core reviewer (`@zedu-hng/reviewers`) will claim it with `/claim` and merge it into `dev`! 🎉
 
 ---
 
