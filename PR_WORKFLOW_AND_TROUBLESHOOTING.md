@@ -2,6 +2,23 @@
 
 This guide outlines the standard operating procedure for opening, managing, and merging Pull Requests into `zedu-hng/zedu-fe`. Follow this exact workflow to ensure your PR passes all automated checks and gets merged quickly without delays.
 
+## 📑 Table of Contents
+
+- [🧭 The 5-Step PR Lifecycle](#-the-5-step-pr-lifecycle)
+  - [Step 1: Pre-Flight Verification](#step-1-pre-flight-verification-before-pushing)
+  - [Step 2: Open PR with Exact Template](#step-2-open-the-pull-request-on-github)
+  - [Step 3: The 3-Minute Wait Period](#step-3-the-wait-period--automated-check-verification)
+  - [Step 4: Drop PR in Team Chat](#step-4-drop-your-pr-in-the-team-chat)
+  - [Step 5: Lead Approval & Merge Queue](#step-5-team-lead-approval--core-review-queue)
+- [🔄 How to Update an Out-of-Date Branch](#-how-to-update-an-out-of-date-branch)
+  - [Why Not Use GitHub's Web Rebase Button?](#-why-not-just-click-githubs-web-rebase-button)
+- [🛠️ Common PR Check Failures & Fixes](#️-common-pr-check-failures--instant-fixes)
+  - [1. PR Template Unticked Error](#1-pr-template-failure-tick-every-checkbox-in-the-pr-template)
+  - [2. PR Title or Branch Name Failure](#2-pr-title-or-branch-name-failure)
+  - [3. Fork Build Pending or Failure](#3-fork-build-pending-or-failure)
+  - [4. Lead Approved Failure](#4-lead-approved-failure)
+  - [5. Hardcoded URL Ban](#5-structure-reuse-urls-and-secrets-failure)
+
 ---
 
 ## 🧭 The 5-Step PR Lifecycle
@@ -61,17 +78,15 @@ Go to **[zedu-hng/zedu-fe/pulls](https://github.com/zedu-hng/zedu-fe/pulls)** an
 
 ---
 
-### Step 4: Drop Your PR in the Team Group Chat
-Once your PR has all green checks (with only `Lead approved` waiting), post your PR in the **Team Kestrel group chat** using this format:
+### Step 4: Drop Your PR in the Team Chat
+Once all automated checks are green (with only `Lead approved` waiting), simply drop your PR link and tag your team lead:
 
 ```text
-👋 Hi Team Leads (@Fabito97 / @yvnks),
-My PR is ready for review! All automated CI checks are passed.
-
-🔗 PR: https://github.com/zedu-hng/zedu-fe/pull/<PR-NUMBER>
-🏷️ Ticket: KESTREL-xxx
-📝 Summary: <Short description of what was changed>
+@Fabito97 Please review: <LINK_TO_YOUR_PR>
 ```
+
+> ⚠️ **IMPORTANT RULE:**  
+> Dropping your PR link in the team chat **certifies that you have personally waited and verified that all automated CI checks are GREEN**. Do not drop broken PRs into the chat!
 
 ---
 
@@ -91,11 +106,17 @@ My PR is ready for review! All automated CI checks are passed.
 When other PRs merge into `dev`, GitHub will show a yellow box:
 > *"This branch is out-of-date with the base branch."*
 
-### ⚠️ NEVER click GitHub's "Update branch" button!
-Clicking that button creates an automated `Merge branch 'dev' into...` commit. That merge commit **fails the `commitlint` check**, violates the **single-author rule**, and pollutes the Git history.
+### ⚠️ NEVER click GitHub's default "Update branch" button!
+Clicking the default button creates an automated `Merge branch 'dev' into...` commit. That merge commit **fails the `commitlint` check**, violates the **single-author rule**, and pollutes the Git history.
+
+### ❓ Why Not Just Click GitHub's Web "Rebase" Button?
+GitHub does have a dropdown option to "Update with rebase", but relying on the web button has **critical risks**:
+1. **Your Local Machine Becomes Outdated:** When you click rebase on GitHub, GitHub rebuilds the commit on the remote server. Your local computer still has the old commits! The next time you test, make changes, or try to push, Git will fail with merge divergence errors.
+2. **Web Button Fails on Any Conflict:** If another teammate edited nearby lines, GitHub's web interface cannot resolve the rebase and completely disables the button.
+3. **Cross-Fork Permission Restrictions:** On fork pull requests, GitHub often blocks web rebasing unless specific cross-repo write permissions are granted.
 
 ### ✅ The Clean Way: Rebase from Your Terminal
-Run these two commands while on your feature branch:
+Running it locally in your terminal takes 5 seconds, avoids all web bugs, and keeps your local code and GitHub 100% in sync:
 
 ```powershell
 # 1. Fetch latest upstream dev and replay your commit cleanly on top:
