@@ -7,16 +7,17 @@ This guide outlines the standard operating procedure for opening, managing, and 
 - [🧭 The 5-Step PR Lifecycle](#-the-5-step-pr-lifecycle)
   - [Step 1: Pre-Flight Verification](#step-1-pre-flight-verification-before-pushing)
   - [Step 2: Open PR with Exact Template](#step-2-open-the-pull-request-on-github)
-  - [Step 3: The 3-Minute Wait Period](#step-3-the-wait-period--automated-check-verification)
+  - [Step 3: The 3-Minute Wait Period & Check Statuses](#step-3-the-wait-period--automated-check-verification)
   - [Step 4: Drop PR in Team Chat](#step-4-drop-your-pr-in-the-team-chat)
-  - [Step 5: Lead Approval & Merge Queue](#step-5-team-lead-approval--core-review-queue)
+  - [Step 5: Lead Approval](#step-5-team-lead-approval)
+- [🎯 How to Confirm Your PR is Ready & Queued for Merge](#-how-to-confirm-your-pr-is-ready--queued-for-merge)
 - [🔄 How to Update an Out-of-Date Branch](#-how-to-update-an-out-of-date-branch)
   - [Why Not Use GitHub's Web Rebase Button?](#-why-not-just-click-githubs-web-rebase-button)
 - [🛠️ Common PR Check Failures & Fixes](#️-common-pr-check-failures--instant-fixes)
   - [1. PR Template Unticked Error](#1-pr-template-failure-tick-every-checkbox-in-the-pr-template)
   - [2. PR Title or Branch Name Failure](#2-pr-title-or-branch-name-failure)
   - [3. Fork Build Pending or Failure](#3-fork-build-pending-or-failure)
-  - [4. Lead Approved Failure](#4-lead-approved-failure)
+  - [4. Lead Approved Failure](#4-lead-approved-showing-as-failing--red-)
   - [5. Hardcoded URL Ban](#5-structure-reuse-urls-and-secrets-failure)
 
 ---
@@ -84,14 +85,24 @@ Once all code checks are green (and only `Lead approved` is waiting), drop your 
 
 ---
 
-### Step 5: Team Lead Approval & Core Review Queue
+### Step 5: Team Lead Approval
 1. Either **`@Fabito97`** or **`@yvnks`** will inspect your PR on GitHub, go to the **Files changed** tab, and click **Approve**.
 2. Once approved, the `Lead approved` check turns green.
-3. Upstream will automatically attach the `ready-for-review` label and add your PR to the **Central Zedu Reviewer Queue**.
-4. **How to verify your PR is ready to merge:**  
-   Visit the official queue link below:  
-   👉 **[Zedu Ready-for-Review Queue](https://github.com/zedu-hng/zedu-fe/pulls?q=is%3Apr+state%3Aopen+label%3Aready-for-review+status%3Asuccess)**  
-   If your PR appears in this list, **you are 100% good to go!** A core reviewer (`@zedu-hng/reviewers`) will claim it with `/claim` and merge it into `dev`! 🎉
+3. Upstream will automatically attach the `ready-for-review` label and promote your PR into the **Central Zedu Reviewer Queue**.
+
+---
+
+## 🎯 How to Confirm Your PR is Ready & Queued for Merge
+
+After receiving team lead approval, you can verify if your PR is officially queued for merge by visiting this link:
+
+👉 **[Zedu Ready-for-Review Queue](https://github.com/zedu-hng/zedu-fe/pulls?q=is%3Apr+state%3Aopen+label%3Aready-for-review+status%3Asuccess)**
+
+### What finding your PR here means:
+* ✅ **All automated checks are green or properly skipped.**
+* ✅ **Team Lead approval is complete.**
+* ✅ **The `ready-for-review` label is attached.**
+* 🎉 **You are 100% good to go!** A Zedu core reviewer (`@zedu-hng/reviewers`) will claim your PR with `/claim` and merge it into `dev`. You do not need to do anything further!
 
 ---
 
