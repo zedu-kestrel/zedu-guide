@@ -170,28 +170,71 @@ git push -u origin feat/task-3-yourname
    * **Compare branch:** `feat/task-3-yourname`
 4. **PR Title (MUST include ticket ID):**  
    `feat(KESTREL-001): update yourname text for task 3`
-5. **PR Description:** Copy and fill in this markdown template:
+5. **PR Description:** Copy and fill in this markdown template (matches upstream's `.github/pull_request_template.md`):
 
 ```markdown
-## Summary
-Updated contributor text (name/details) for Team Kestrel on the contributors page for Task 3. No styling changes made.
+## Ticket
 
-## Type of Change
-- [x] Text / Documentation improvement (non-breaking)
+- **Ticket ID:** KESTREL-004
+- **Ticket title:** Update contributor bio text on Team Kestrel page
 
-## How Has This Been Tested?
-- [x] `pnpm run check-format` passed
-- [x] `pnpm run check-lint` passed
-- [x] `pnpm run check-types` passed
-- [x] `pnpm run build` passed
-- [x] Verified locally on http://localhost:3000/contributors/zedu-kestrel
+## Team lead
+
+@yvnks
+
+## What changed
+
+Updated contributor text (name/bio/details) for Team Kestrel on the contributors page for Task 3 in `src/app/(homepage)/contributors/zedu-kestrel/_lib/contributors.ts`. No styling or layout changes made.
+
+## Why
+
+Task 3 requires every team member to make an atomic, non-breaking text update to verify the development workflow and CI/CD pipeline.
+
+## How to test
+
+1. Run `pnpm run check-format`
+2. Run `pnpm run check-lint`
+3. Run `pnpm run check-types`
+4. Run `pnpm run build`
+5. Visit `http://localhost:3000/contributors/zedu-kestrel` and verify your card text displays as expected.
+
+## What to expect
+
+The contributor card correctly reflects the updated text with zero styling, CSS, or layout changes.
+
+## Backend
+
+<!-- Leave empty: runs against dev backend -->
+
+## Test evidence
+
+- Tested against: local dev / fork build
+- Tests: N/A, text-only static metadata update; all linters and build checks pass with 0 errors.
+
+## Mandatory checks
+
+- [x] **Atomic:** one logical change, at most ~400 lines of meaningful code (lockfiles and generated files like `*.tsbuildinfo` don't count). Larger needs a `size-override` label from a reviewer.
+- [x] **Database / API contract:** schema changes follow Expand-Contract — no destructive drops or renames.
+- [x] **Preview:** I checked the change in my fork's preview (or the fork build, if the team hasn't set up previews).
+- [x] **Protected files:** I did not change `.github/`, `AGENTS.md`, `CONTRIBUTING.md` or tooling config without reviewer agreement and the `config-change-approved` label.
+
+## Screenshots / recording
+
+N/A, non-visual/text-only metadata change.
+
+## AI usage
+
+Assisted by AI assistant to format and validate Git branch and commit conventions.
 
 ## Checklist
-- [x] My branch follows the `feat/task-3-<desc>` convention
-- [x] My commit message follows Conventional Commits (lowercase)
-- [x] Text-only change: NO styling or CSS modifications
-- [x] No hardcoded `http://` or `https://` external URLs were added
-- [x] All exported functions/types include proper docstrings
+
+- [x] Linked to an approved ticket
+- [x] Only intended files changed
+- [x] No secrets or debug code committed
+- [x] Tests added/updated for what this ticket changed (not retroactive coverage of unrelated code)
+- [x] Fork build triggered (first run: fork → Actions → PR build → Run workflow)
+- [ ] Team lead approved this PR
+- [x] Self-reviewed (`git status` / `git diff`)
 ```
 
 6. Click **Create pull request**.

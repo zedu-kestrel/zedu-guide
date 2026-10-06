@@ -139,65 +139,92 @@ Your PR title is validated by `commitlint`. You **MUST** include your ticket num
 * `refactor(KESTREL-008): extract reusable card component`
 
 ### 5.3. PR Body Template
-Copy and fill out this exact Markdown template in your PR description:
+Copy and fill out this exact Markdown template in your PR description (matches upstream's `.github/pull_request_template.md`):
 
 ```markdown
 ## Ticket
+
+<!-- Link the approved ClickUp/Linear ticket. -->
 
 - **Ticket ID:** KESTREL-001
 - **Ticket title:** Add Team Kestrel Contributors Page
 
 ## Team lead
 
+<!-- @handle of your team lead. They review and approve before Zedu reviewers pick this up. -->
+
 @yvnks
 
 ## What changed
 
+<!-- Short summary of the change. -->
+
 - Added Team Kestrel contributors page at `/contributors/zedu-kestrel`.
-- Added contributor data list for the 20 team members in `_lib/contributors.ts`.
-- Added `ContributorCard` component displaying avatar initials, background, role, and contact links.
-- Added page layout with metadata, hero section, and responsive grid.
+- Added contributor data list in `_lib/contributors.ts`.
+- Added `ContributorCard` component displaying avatar, role, and bio.
 
 ## Why
 
-To showcase the Team Kestrel members contributing to Zedu during the HNG 15 Internship.
+<!-- The problem or reason this ticket exists. -->
+
+To showcase Team Kestrel members contributing to Zedu during the HNG 15 Internship.
 
 ## How to test
 
+<!-- Numbered steps a reviewer can follow to verify the change themselves. -->
+
 1. Run `pnpm dev`.
 2. Visit `http://localhost:3000/contributors/zedu-kestrel`.
-3. Verify all contributor cards render accurately.
+3. Verify contributor cards render properly.
 4. Run `pnpm check-types` and `pnpm check-lint`.
 
 ## What to expect
 
-The contributors page loads with the hero banner and member cards without errors or broken links.
+<!-- The expected behaviour after following the steps above. -->
+
+The contributors page loads smoothly with member cards and zero console errors.
+
+## Backend
+
+<!-- Leave this section empty: your preview runs against the dev backend.
+     Only if this PR needs backend work that isn't on dev yet, add a line here starting with "Backend URL:"
+     followed by that backend's host, for example https://api.<team>.groups.zedu.chat. The Backend dependency
+     check then blocks merging until the backend lands on dev and you delete the line. -->
 
 ## Test evidence
 
-- Tested against: Local dev server (`http://localhost:3000`)
-- Tests: Verified locally with `pnpm check-format`, `pnpm check-lint`, and `pnpm check-types`.
+<!-- The Fork build check reports the build result automatically. Say which backend you tested against,
+     and whether tests were added or updated for what this ticket changed (and why not, if not). -->
+
+- Tested against: Local dev server (`http://localhost:3000`) / dev backend
+- Tests: Verified locally with `pnpm check-format`, `pnpm check-lint`, `pnpm check-types`, and `pnpm build`.
 
 ## Mandatory checks
 
-- [x] **Atomic:** exactly one ticket, max ~1 day of work (≤400 lines). Larger needs a `size-override` label from a reviewer.
-- [x] **Feature flag:** new routes and large features sit behind a `NEXT_PUBLIC_FF_*` flag, default `OFF`.
-  - Flag name: `N/A`
+- [x] **Atomic:** one logical change, at most ~400 lines of meaningful code (lockfiles and generated files like `*.tsbuildinfo` don't count). Larger needs a `size-override` label from a reviewer.
 - [x] **Database / API contract:** schema changes follow Expand-Contract — no destructive drops or renames.
-- [x] **Preview:** I verified the change in the fork build (and my team's preview link, if we deploy one).
+- [x] **Preview:** I checked the change in my fork's preview (or the fork build, if the team hasn't set up previews).
 - [x] **Protected files:** I did not change `.github/`, `AGENTS.md`, `CONTRIBUTING.md` or tooling config without reviewer agreement and the `config-change-approved` label.
+
+## Screenshots / recording
+
+<!-- Required for visible or interactive changes. Otherwise write "N/A, non-visual change". -->
+
+N/A, non-visual or include screenshot of rendered page here.
 
 ## AI usage
 
-Used AI pair programming to structure the page components and verify type safety.
+<!-- One line on how AI was used, if significant (see CONTRIBUTING.md, "AI usage"). -->
+
+Assisted by AI to scaffold components and verify TypeScript types.
 
 ## Checklist
 
 - [x] Linked to an approved ticket
 - [x] Only intended files changed
 - [x] No secrets or debug code committed
-- [x] Tests added/updated for what this ticket changed
-- [x] Fork build triggered
+- [x] Tests added/updated for what this ticket changed (not retroactive coverage of unrelated code)
+- [x] Fork build triggered (first run: fork → Actions → PR build → Run workflow)
 - [ ] Team lead approved this PR
 - [x] Self-reviewed (`git status` / `git diff`)
 ```
