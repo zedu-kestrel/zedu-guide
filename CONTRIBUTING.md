@@ -225,7 +225,7 @@ Assisted by AI to scaffold components and verify TypeScript types.
 - [x] No secrets or debug code committed
 - [x] Tests added/updated for what this ticket changed (not retroactive coverage of unrelated code)
 - [x] Fork build triggered (first run: fork → Actions → PR build → Run workflow)
-- [ ] Team lead approved this PR
+- [x] Team lead approved this PR
 - [x] Self-reviewed (`git status` / `git diff`)
 ```
 

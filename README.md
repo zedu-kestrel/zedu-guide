@@ -15,7 +15,8 @@ Whether you are an experienced software engineer or a beginner collaborating wit
 | **[1. Getting Started & Setup](GETTING_STARTED.md)** | Cloning the correct fork, setting up remotes, Node/pnpm environment, and running locally. |
 | **[2. Contribution & Git Workflow](CONTRIBUTING.md)** | Branch naming regex, syncing with upstream, conventional commit rules, and opening PRs. |
 | **[3. CI/CD & Review Bots Blueprint](CI_CD_AND_BOT_RULES.md)** | Complete breakdown of PR review bots, hardcoded URL bans, docstring coverage, and fork build relays. |
-| **[4. AI Prompting Cheatsheet](AI_PROMPTING_CHEATSHEET.md)** | Ready-to-copy prompts to give your AI pair programmer so it follows repo rules automatically. |
+| **[4. PR Workflow & Troubleshooting Guide](PR_WORKFLOW_AND_TROUBLESHOOTING.md)** | **Essential for all PRs!** How to manage your PR after opening, update out-of-date branches with rebase, and fix all CI check failures. |
+| **[5. AI Prompting Cheatsheet](AI_PROMPTING_CHEATSHEET.md)** | Ready-to-copy prompts to give your AI pair programmer so it follows repo rules automatically. |
 
 ### 🛠️ Tool & Environment Setup Guides (Windows, Mac, Linux)
 | Tool | Guide | Covers |

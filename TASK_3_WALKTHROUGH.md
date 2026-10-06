@@ -233,7 +233,7 @@ Assisted by AI assistant to format and validate Git branch and commit convention
 - [x] No secrets or debug code committed
 - [x] Tests added/updated for what this ticket changed (not retroactive coverage of unrelated code)
 - [x] Fork build triggered (first run: fork → Actions → PR build → Run workflow)
-- [ ] Team lead approved this PR
+- [x] Team lead approved this PR
 - [x] Self-reviewed (`git status` / `git diff`)
 ```
 
