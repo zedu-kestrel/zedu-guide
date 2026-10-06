@@ -146,8 +146,17 @@ git push --force-with-lease origin HEAD
 ## 🛠️ Common PR Check Failures & Instant Fixes
 
 ### 1. `PR template` Failure (`Tick every checkbox in the PR template`)
-* **Cause:** The CI validator compares each checkbox line against upstream's template character-for-character. If you shortened, truncated, or left any box unticked (including `Team lead approved this PR`), the check fails.
-* **Fix:** Copy the exact mandatory checks and checklist blocks below into your PR description and click **Update comment**:
+* **How It Works:** Upstream's CI downloads the live `.github/pull_request_template.md` directly from `zedu-hng/zedu-fe:dev` and compares each checkbox line **character-for-character**. If any line is shortened, modified, or left unticked (`[ ]`), the check immediately fails.
+* **Where to Always Get the Latest Official Template:**  
+  If upstream ever updates the template or adds new checklist items, always grab the single source of truth directly from upstream:  
+  👉 **[Official Upstream PR Template (Live on `dev`)](https://github.com/zedu-hng/zedu-fe/blob/dev/.github/pull_request_template.md)**  
+  *(Or check your local repo file: `.github/pull_request_template.md`)*
+* **How to Fix It on Your PR:**
+  1. Open the failed **PR rules** check on your PR — the error log explicitly lists the exact lines considered `Unticked`.
+  2. Copy the exact `## Mandatory checks` and `## Checklist` blocks from the official template (or from below).
+  3. Ensure **every single checkbox** has `- [x]` verbatim (do not delete or edit any text!).
+  4. Click **Edit** on your PR description, paste the exact lines, and click **Update comment**.
+  5. The `PR template` check will automatically re-run and turn **green in ~5 seconds** without pushing code!
 
 ```markdown
 ## Mandatory checks
@@ -167,7 +176,6 @@ git push --force-with-lease origin HEAD
 - [x] Team lead approved this PR
 - [x] Self-reviewed (`git status` / `git diff`)
 ```
-*(As soon as you save the edit, `pr-rules` will re-run automatically and turn green without pushing new code!)*
 
 ---
 
