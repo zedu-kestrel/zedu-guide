@@ -74,12 +74,12 @@ Go to **[zedu-hng/zedu-fe/pulls](https://github.com/zedu-hng/zedu-fe/pulls)** an
    * `Preview status` ✅
    * `Fork build` ✅
 
-*(The only check that should be pending at this point is `Lead approved`, which waits for a team lead review).*
+*(Note: `Lead approved` will show as a red ❌ or "failing" with the message: `Waiting for an approving review from a team lead: @Fabito97 @yvnks`. **This is completely normal and NOT a code bug!** It simply means GitHub is waiting for a lead to approve).*
 
 ---
 
 ### Step 4: Drop Your PR in the Team Chat
-Once all automated checks are green (with only `Lead approved` waiting), simply drop your PR link and tag your team lead:
+Once all code checks are green (and only `Lead approved` is waiting), drop your PR link in the chat and tag your team lead:
 
 ```text
 @Fabito97 Please review: <LINK_TO_YOUR_PR>
@@ -182,9 +182,9 @@ git push --force-with-lease origin HEAD
 
 ---
 
-### 4. `Lead approved` Failure
-* **Cause:** PR authors **cannot approve their own PRs**. GitHub strictly forbids self-approving reviews.
-* **Fix:** Drop your PR link in the team chat and ask **`@Fabito97`** or **`@yvnks`** to review and submit an approval via GitHub's **Files changed** ➔ **Review changes** tab.
+### 4. `Lead approved` Showing as "Failing" / Red ❌
+* **Cause:** By default, GitHub marks `Lead approved` with a red ❌ and the description: *"Waiting for an approving review from a team lead: @Fabito97 @yvnks"*. **This does NOT mean your code failed!** It simply indicates that the PR is waiting for lead review, and GitHub strictly prevents authors from self-approving.
+* **Fix:** When all your other checks are green and you see this, simply drop your PR link in the chat and tag `@Fabito97`. Once we submit an approving review, the red ❌ instantly turns into a green ✅!
 
 ---
 
