@@ -10,8 +10,14 @@ Before cloning, verify that you have the required tools installed on your comput
 
 * 🐙 **[Git & GitHub Setup Guide](tools-installation-guide/GIT_AND_GITHUB.md)** — Installing Git, GitHub account setup, requesting team access, accepting invitations, and fixing 403 permission errors.
 * 🟢 **[Node.js & pnpm Setup Guide](tools-installation-guide/NODE_AND_PNPM.md)** — Installing Node 20 LTS, pnpm, and fixing Windows PowerShell script execution policy errors.
+* 📱 **[React Native & Android Setup Guide](tools-installation-guide/REACT_NATIVE_AND_ANDROID.md)** — Installing JDK 17, Android Studio, SDK 36, NDK 28, and physical phone USB debugging.
+* 🖥️ **[Flutter & Desktop Setup Guide](tools-installation-guide/FLUTTER_AND_DESKTOP.md)** — Installing Flutter 3.41.5, Visual Studio C++ workload, and MSVC compiler settings.
 * 🐳 **[Docker Setup Guide](tools-installation-guide/DOCKER.md)** — Running databases and microservices with Docker Desktop (Windows WSL2, Mac Apple Silicon/Intel, Linux).
 * 🐹 **[Go (Golang) Setup Guide](tools-installation-guide/GO.md)** — Installing Go for backend microservices, modules, and proxy settings.
+
+### Application Run Guides:
+* 📱 **[Zedu Mobile Setup Guide](MOBILE_SETUP_GUIDE.md)** — Running the React Native mobile app on Android phones or emulators.
+* 🖥️ **[Zedu Desktop Setup Guide](DESKTOP_SETUP_GUIDE.md)** — Running the Flutter desktop app on Windows.
 
 ### Quick Version Check Table:
 
@@ -19,7 +25,10 @@ Before cloning, verify that you have the required tools installed on your comput
 | :--- | :--- | :--- | :--- |
 | **Git** | `2.40+` | `git --version` | [Git Guide](tools-installation-guide/GIT_AND_GITHUB.md) |
 | **Node.js** | `v20.x` (LTS) | `node -v` | [Node Guide](tools-installation-guide/NODE_AND_PNPM.md) |
-| **pnpm** | `10.27.0` or higher (matching repo) | `pnpm -v` | [pnpm Guide](tools-installation-guide/NODE_AND_PNPM.md) |
+| **Java JDK** | **JDK 17 (Temurin)** ⚠️ | `java -version` | [Android Guide](tools-installation-guide/REACT_NATIVE_AND_ANDROID.md) |
+| **Android SDK / adb** | API 36 / Build-Tools 36.0.0 | `adb --version` | [Android Guide](tools-installation-guide/REACT_NATIVE_AND_ANDROID.md) |
+| **Flutter SDK** | `3.41.5` (Stable) | `flutter --version` | [Desktop Guide](tools-installation-guide/FLUTTER_AND_DESKTOP.md) |
+| **pnpm** | `10.27.0` (for FE) | `pnpm -v` | [pnpm Guide](tools-installation-guide/NODE_AND_PNPM.md) |
 | **Docker** (Optional) | `26.x+` / Compose `v2.x` | `docker --version` | [Docker Guide](tools-installation-guide/DOCKER.md) |
 | **Go** (Optional) | `1.22+` | `go version` | [Go Guide](tools-installation-guide/GO.md) |
 

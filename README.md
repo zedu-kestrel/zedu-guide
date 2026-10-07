@@ -12,6 +12,8 @@ Whether you are an experienced software engineer or a beginner collaborating wit
 | Document | Purpose |
 | :--- | :--- |
 | **[🎯 Task 3 Walkthrough Guide](TASK_3_WALKTHROUGH.md)** | **Start here for Task 3!** Step-by-step guide to updating text/name (no styling changes), testing, branching, and getting merged. |
+| **[📱 Mobile Setup Guide (React Native)](MOBILE_SETUP_GUIDE.md)** | Complete guide to running `zedu-mobile` on Android phones or emulators with Metro and JDK 17. |
+| **[🖥️ Desktop Setup Guide (Flutter)](DESKTOP_SETUP_GUIDE.md)** | Complete guide to running `zedu-desktop` on Windows with Flutter 3.41.5 and Visual Studio C++. |
 | **[1. Getting Started & Setup](GETTING_STARTED.md)** | Cloning the correct fork, setting up remotes, Node/pnpm environment, and running locally. |
 | **[2. Contribution & Git Workflow](CONTRIBUTING.md)** | Branch naming regex, syncing with upstream, conventional commit rules, and opening PRs. |
 | **[3. CI/CD & Review Bots Blueprint](CI_CD_AND_BOT_RULES.md)** | Complete breakdown of PR review bots, hardcoded URL bans, docstring coverage, and fork build relays. |
@@ -21,6 +23,8 @@ Whether you are an experienced software engineer or a beginner collaborating wit
 ### 🛠️ Tool & Environment Setup Guides (Windows, Mac, Linux)
 | Tool | Guide | Covers |
 | :--- | :--- | :--- |
+| **Android SDK & Mobile** | **[React Native & Android Guide](tools-installation-guide/REACT_NATIVE_AND_ANDROID.md)** | Installing JDK 17 (Temurin), Android Studio, command-line tools, SDK 36, NDK 28, and physical phone USB debugging. |
+| **Flutter & Desktop C++** | **[Flutter & Desktop Guide](tools-installation-guide/FLUTTER_AND_DESKTOP.md)** | Installing Flutter 3.41.5, Visual Studio C++ workload, MSVC coroutine flags, and Agora native fixes. |
 | **Git & GitHub** | **[Git & GitHub Guide](tools-installation-guide/GIT_AND_GITHUB.md)** | Installing Git, creating account, requesting access to `@zedu-kestrel`, accepting invites, and fixing **403 Permission Denied** errors. |
 | **Node.js & pnpm** | **[Node.js & pnpm Guide](tools-installation-guide/NODE_AND_PNPM.md)** | Installing Node 20 LTS, pnpm 10.x, Corepack, and fixing Windows PowerShell script execution policy errors. |
 | **Docker** | **[Docker Setup Guide](tools-installation-guide/DOCKER.md)** | Docker Desktop installation, WSL 2 on Windows, Mac Apple Silicon/Intel, Linux engine, port conflict resolution, and memory limits. |
