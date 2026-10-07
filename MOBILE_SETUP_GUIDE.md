@@ -38,7 +38,7 @@ We follow the standard HNG Forking Workflow:
 1. **Fork the repository** on GitHub from `zedu-hng/zedu-mobile` into your team's GitHub organization (e.g., `zedu-kestrel/zedu-mobile`).
 2. Clone your **team's fork** to your local machine:
    ```bash
-   git clone https://github.com/<your-team-org>/zedu-mobile.git
+   git clone https://github.com/zedu-kestrel/zedu-mobile.git
    cd zedu-mobile
    ```
 3. Add the upstream review repository:
