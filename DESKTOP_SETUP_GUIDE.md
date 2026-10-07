@@ -31,9 +31,9 @@ Ensure you have green checkmarks for **Windows Version**, **Visual Studio**, and
 ## 🚀 Step 1: Forking & Cloning the Repository
 
 1. **Fork the repository** on GitHub from `zedu-hng/zedu-desktop` into your team's GitHub organization (e.g., `zedu-kestrel/zedu-desktop`).
-2. Clone your **team's fork** locally:
+2. Clone the **team's fork** locally:
    ```bash
-   git clone https://github.com/<your-team-org>/zedu-desktop.git
+   git clone https://github.com/zedu-kestrel/zedu-desktop.git
    cd zedu-desktop
    ```
 3. Add the upstream review repository:
