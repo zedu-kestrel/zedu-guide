@@ -128,6 +128,15 @@ GitHub does have a dropdown option to "Update with rebase", but relying on the w
 ### ✅ The Clean Way: Rebase from Your Terminal
 Running it locally in your terminal takes 5 seconds, avoids all web bugs, and keeps your local code and GitHub 100% in sync:
 
+- Ensure you are on the same branch that you opened a PR on Github
+- If you are not, you should first run
+
+```powershell
+# 1. Fetch latest upstream dev and replay your commit cleanly on top:
+git checkout your-branch-name
+```
+- After you have switched to your feature branch, run:
+
 ```powershell
 # 1. Fetch latest upstream dev and replay your commit cleanly on top:
 git pull --rebase upstream dev

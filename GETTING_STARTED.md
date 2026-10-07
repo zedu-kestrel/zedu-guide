@@ -35,7 +35,7 @@ Before cloning, verify that you have the required tools installed on your comput
 > [!TIP]
 > If you don't have `pnpm` installed, run:
 > ```bash
-> npm install -g pnpm@10.27.0
+> npm install -g pnpm
 > ```
 > *(On Windows, if you get a script permission error, see [Node & pnpm Guide Q1](tools-installation-guide/NODE_AND_PNPM.md#q1-on-windows-powershell-pnpm--file-cpnpmps1-cannot-be-loaded-because-running-scripts-is-disabled-on-this-system))*
 

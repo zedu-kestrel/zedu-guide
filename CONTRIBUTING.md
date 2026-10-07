@@ -49,15 +49,15 @@ The review repository enforces the following regex pattern via GitHub Actions:
 
 | Allowed Types | Example Ticket Prefix | Example Valid Branch Names |
 | :--- | :--- | :--- |
-| `feat/` | `task-2-` or `2-` | `feat/task-2-zedu-kestrel-contributors-page` |
-| `fix/` | `chat-142-` | `fix/chat-142-input-overflow` |
-| `refactor/` | `stage-2-` | `refactor/stage-2-avatar-component` |
-| `chore/` | `10-` | `chore/10-update-team-metadata` |
+| `feat/` | `KESTREL-001-` | `feat/KESTREL-001-zedu-kestrel-contributors-page` |
+| `fix/` | `KESTREL-142-` | `fix/KESTREL-142-input-overflow` |
+| `refactor/` | `KESTREL-002-` | `refactor/KESTREL-002-avatar-component` |
+| `chore/` | `KESTREL-010-` | `chore/KESTREL-010-update-team-metadata` |
 
 ### ❌ What Will FAIL CI:
 * `feature/contributor` *(uses `feature/` instead of `feat/`, missing ticket number)*
 * `feat/contributors-page` *(missing numeric ticket/task ID)*
-* `feat/TASK-2-Contributors` *(contains uppercase letters)*
+* `feat/add-Contributors` *(contains uppercase letters)*
 * `dev` or `staging` *(never work directly on main branches)*
 
 ### Create Your Branch:
